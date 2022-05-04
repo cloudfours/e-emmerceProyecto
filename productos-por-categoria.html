@@ -41,10 +41,10 @@
     </section>
     <section class="section-productos">
         <div class="caja__productos">
-            <div class="star__wars" data-star>
+            <section class="star__wars" data-star>
                 <div class="star">
                     <h2 class="titulo_cateogria" data-titulo-star>Star wars</h2>
-                    <p class="ver__todo__categoria">Ver todo</p>
+                    <a class="ver__todo__categoria" href="productocategoria.html">Ver todo</a>
                 </div>
                 <div class="star__wars__contenido" data-venta>
                     <div class="caja__producto__contenido">
@@ -54,17 +54,17 @@
                         </div>
                         <h3 class="nombre__producto">Maestro</h3>
                         <span class="caja__nombre__producto__precio">$ 60.00</span>
-                        <p class="referencia__producto">Ver producto</p>
+                        <a class="referencia__producto">Ver producto</a>
                     </div>
                 </div>
-            </div>
-            <div class="consolas" data-con>
+            </section>
+            <section class="consolas" data-con>
                 <div class="consola">
                     <h2 class="titulo_cateogria" id="consolas" data-titulo-cons>Consolas</h2>
-                    <p class="ver__todo__categoria">Ver todo</p>
+                    <a class="ver__todo__categoria" href="productocategoria.html">Ver todo</a>
                 </div>
-                <div class="consolas__contenido">
-                    <div class="caja__producto__contenido" data-venta>
+                <div class="consolas__contenido" data-venta>
+                    <div class="caja__producto__contenido">
                         <div class="caja__producto__contenido__imagen" id="cabeza6">
                             <i class="fa-solid fa-pen"></i>
                             <i class="fa-solid fa-trash"></i>
@@ -74,24 +74,24 @@
                         <p class="referencia__producto">Ver producto</p>
                     </div>
 
+            </section>
+            <section class="diversion" data-diver>
+                <div class="diver">
+                    <h2 class="titulo_cateogria" id="Diversion">Diversion</h2>
+                    <a class="ver__todo__categoria" href="productocategoria.html">Ver todo</a>
                 </div>
-                <div class="diversion" data-diver>
-                    <div class="diver">
-                        <h2 class="titulo_cateogria" id="Diversion">Diversion</h2>
-                        <p class="ver__todo__categoria">Ver todo</p>
-                    </div>
-                    <div class="diversion__contenido" data-venta>
-                        <div class="caja__producto__contenido" id="producto_escondido_one">
-                            <div class="caja__producto__contenido__imagen" id="cabeza17">
-                                <i class="fa-solid fa-pen"></i>
-                                <i class="fa-solid fa-trash"></i>
-                            </div>
-                            <h3 class="nombre__producto">Maestro</h3>
-                            <span class="caja__nombre__producto__precio">$ 60.00</span>
-                            <p class="referencia__producto">Ver producto</p>
+                <div class="diversion__contenido" data-venta>
+                    <div class="caja__producto__contenido" id="producto_escondido_one">
+                        <div class="caja__producto__contenido__imagen" id="cabeza17">
+                            <i class="fa-solid fa-pen"></i>
+                            <i class="fa-solid fa-trash"></i>
                         </div>
+                        <h3 class="nombre__producto">Maestro</h3>
+                        <span class="caja__nombre__producto__precio">$ 60.00</span>
+                        <p class="referencia__producto">Ver producto</p>
                     </div>
                 </div>
+            </section>
     </section>
     <section class="formulario">
         <div class="formulario__politicas">
@@ -131,8 +131,8 @@
         <p class="anio">2022</p>
 
     </footer>
-    <script src="./funciones/iniciar.sesion.js"></script>
-    <script type="module" src="./controllers/mostrar.productos.js"></script>
+    <script src="./validaciones/iniciar.sesion.js"></script>
+    <script type="module" src="./controllers/mostrar.productos.categoria.js"></script>
     <script type="module" src="./controllers/crearElementos.js"></script>
 </body>
 

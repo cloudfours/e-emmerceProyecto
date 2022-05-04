@@ -17,9 +17,7 @@ url.addEventListener('change', (e) => {
 
 
     }
-    const tituloStar = document.querySelector('[data-titulo-star]').value;
-    const tituloCons = document.querySelector('[data-titulo-cons]').value;
-    const tituloDiv = document.querySelector('[data-diver-titulo]').value;
+
 })
 
 formulario.addEventListener('submit', (evento) => {
@@ -27,7 +25,7 @@ formulario.addEventListener('submit', (evento) => {
     const url = document.querySelector('[data-imagen]');
     const nombre = document.querySelector('[data-nombre]').value;
     const precio = document.querySelector('[data-precio]').value;
-    const categoria = document.querySelector('[data-cate]').value;
+    const categoria = document.querySelector('.lista_despegable').value;
     const desc = document.querySelector('[data-desc]').value;
 
     functPro.crearProducto(retorno, nombre, precio, categoria, desc)

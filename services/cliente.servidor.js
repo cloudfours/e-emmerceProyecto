@@ -1,8 +1,12 @@
-const listaProducto = () => {
-    return fetch("http://localhost:3000/producto").then((responder) => responder.json());
+const link = 'https://young-cove-98921.herokuapp.com/producto'
+
+const listaProducto = async() => {
+    const responder = await fetch(`${link}`);
+    return await responder.json();
+
 }
 const crearProducto = (url, nombre, precio, categoria, descripcion) => {
-    return fetch("http://localhost:3000/producto", {
+    return fetch(`${link}`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
@@ -11,38 +15,45 @@ const crearProducto = (url, nombre, precio, categoria, descripcion) => {
     });
 }
 const eliminarProducto = (id) => {
-    return fetch(`http://localhost:3000/producto/${id}`, {
+    return fetch(`${link}/${id}`, {
         method: "DELETE",
     });
 }
-const actualizarProducto = (url, nombre, precio, categoria, descripcion, id) => {
-    return fetch(`http://localhost:3000/producto/${id}`, {
+const actualizarProducto = async(url, nombre, precio, categoria, descripcion, id) => {
+    try {
+        const respuesta = await fetch(`${link}/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ nombre, precio, categoria, descripcion }),
-        })
-        .then((respuesta) => respuesta)
-        .catch((err) => console.log(err));
+            body: JSON.stringify({ url, nombre, precio, categoria, descripcion, id }),
+        });
+        return respuesta;
+    } catch (err) {
+        return console.log(err);
+    }
 }
-const verProducto = (id) => {
-    return fetch(`http://localhost:3000/producto/${id}`).then((responder) => responder.json());
+
+const detalleProducto = async(id) => {
+    const respuesta = await fetch(`${link}/${id}`);
+    return respuesta.json();
 }
-const detalleProducto = (id) => {
-    return fetch(`http://localhost:3000/producto/${id}`).then((respuesta) =>
-        respuesta.json()
-    );
+const catLista = async(categoria) => {
+    try {
+        const respuesta = await fetch(`${link}?categoria=${categoria}&_sort=id&_order=desc&_limit=6`);
+        return respuesta.json();
+    } catch (err) {
+        return err;
+    }
+
 }
-const seccionLista = (categoria) => {
-    fetch(`http://localhost:3000/producto/${categoria}`).then((respuesta) => respuesta.json()).catch((err) => err)
-}
+const productosPorcate = (categoria) => fetch(`${link}?categoria=${categoria}`).then((respuesta) => respuesta.json()).catch((error) => error);
 export const functPro = {
     crearProducto,
     listaProducto,
     actualizarProducto,
     eliminarProducto,
     detalleProducto,
-    verProducto,
-    seccionLista
+    catLista,
+    productosPorcate
 }

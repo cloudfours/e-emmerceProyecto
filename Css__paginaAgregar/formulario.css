@@ -126,3 +126,13 @@
     font-size: 12px;
     margin: 0 20px;
 }
+
+.lista_despegable {
+    width: 20vh;
+    height: 5vh;
+    margin-left: 16px;
+}
+
+.lista_despegable:hover {
+    background: #c2d2ee;
+}
