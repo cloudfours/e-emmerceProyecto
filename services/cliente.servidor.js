@@ -34,10 +34,8 @@ const actualizarProducto = async(url, nombre, precio, categoria, descripcion, id
     }
 }
 
-const detalleProducto = async(id) => {
-    const respuesta = await fetch(`${link}/${id}`);
-    return respuesta.json();
-}
+const detalleProducto = (id) => fetch(`${url}/${id}`).then((respuesta) => respuesta.json()).catch((error) => error);
+console.log(fetch);
 const catLista = async(categoria) => {
     try {
         const respuesta = await fetch(`${link}?categoria=${categoria}&_sort=id&_order=desc&_limit=6`);

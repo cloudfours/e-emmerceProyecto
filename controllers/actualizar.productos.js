@@ -1,39 +1,40 @@
 import { functPro } from '../services/cliente.servidor.js';
-const urlact = document.querySelector('[data-imagen]').value;
-const nombre = document.querySelector('[data-nombre]').value;
-const precio = document.querySelector('[data-precio]').value;
-const categoria = document.querySelector('.lista_despegable').value;
-const desc = document.querySelector('[data-desc]').value;
-
-urlact.addEventListener('change', (e) => {
-    e.preventDefault();
-
-    var reader = new FileReader();
-    reader.readAsDataURL(url.files[0]);
-    reader.onload = function() {
-        console.log(reader.result);
-
-        retorno = reader.result
-        console.log('mi retorno', retorno);
-
-        return retorno;
-
-
-    }
-
-})
+const urlact = document.querySelector('[data-imagen]');
+const nombre = document.querySelector('[data-nombre]');
+const precio = document.querySelector('[data-precio]');
+const categoria = document.querySelector('.lista_despegable');
+const desc = document.querySelector('[data-desc]');
+const formulario = document.querySelector('[ data-form]');
+let retorno = '';
 const verDetalleproducto = () => {
     const urls = new URL(window.location);
     const id = urls.searchParams.get("id");
+    urlact.addEventListener('change', (e) => {
+        e.preventDefault();
+
+        var reader = new FileReader();
+        reader.readAsDataURL(urlact.files[0]);
+        reader.onload = function() {
+            console.log(reader.result);
+
+            retorno = reader.result
+            console.log('mi retorno', retorno);
+
+            return retorno;
+
+
+        }
+
+    })
     if (id == null) {
         console.log('no hay nada');
     }
     functPro.detalleProducto(id).then((producto) => {
-        url = producto.url;
-        nombre = producto.nombre;
-        precio = producto.precio;
-        categoria = producto.categoria;
-        desc = producto.desc;
+        urlact.value = producto.url;
+        nombre.value = producto.nombre;
+        precio.value = producto.precio;
+        categoria.value = producto.categoria;
+        desc.value = producto.desc;
 
     }).catch(err => console.log(err));
 
@@ -43,15 +44,16 @@ const verDetalleproducto = () => {
 verDetalleproducto();
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
-    modificarPro();
+    console.log(modificarProducto());
+});
 
 
-})
-const modificarPro = async() => {
+const modificarProducto = async() => {
+
     try {
-        const modificarPro = await functPro.actualizarProducto(url, nombre, precio, categoria, desc, id)
-        window.location.href = 'index.html';
+        functPro.actualizarProducto(urlact.value, nombre.value, precio.value, categoria.value, desc.value, id)
+        window.location.href = ("producto.html");
     } catch (error) {
-
+        console.log(error)
     }
 }
