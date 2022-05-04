@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css__paginaAgregar/estructura.css">
+    <link rel="stylesheet" href="./Css__paginaAgregar/reset.css">
+    <link rel="stylesheet" href="./Css__paginaAgregar/cabeza.css">
+    <link rel="stylesheet" href="./Css__paginaAgregar/cuerpo.css">
+    <link rel="stylesheet" href="./Css__paginaAgregar/formulario.css">
+    <link rel="stylesheet" href="./Css__paginaAgregar/pie.css">
+    <link rel="stylesheet" href="./Css__paginaAgregar/responsive.css">
+    <script src="https://kit.fontawesome.com/af82257cc6.js" crossorigin="anonymous"></script>
+    <title>Principal</title>
+</head>
+
+<body class="estructura">
+    <header class="menu__cabeza">
+        <nav class="menu__cabeza__opciones">
+            <div class="caja__icono">
+                <i class="fa-solid fa-gamepad"></i>
+                <h3 class="menu__cabeza__titulo"><span class="icono__color">Alura</span>Geek</h3>
+            </div>
+            <div class="busqueda__button">
+                <input class="buscar__campo" type="text" placeholder="¿Que deseas Buscar?">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+        </nav>
+        <button class="button__login"><a href="./Sesion.html">Login</a></button>
+
+
+    </header>
+
+    <section class="section__productos">
+        <form class="formulario__rellenar__producto" data-form>
+
+            <div class="texto">
+                <h2 class="titulo__formulario__producto">Agregar nuevo producto</h2>
+            </div>
+            <div class="agregar__producto">
+                <div class="caja__carga">
+                    <div class="cargar__imagen__upload" id="arrastrar_imagen">
+                        <i class="fa-solid fa-image"></i>
+                        <i class="fa-solid fa-angle-up"></i>
+                        <h3 class="instruccion__agregar__imagen" id='imagen_cambiar_titulo'>Agregar una imagen para el producto</h3>
+                    </div>
+                    <div id="preview"></div>
+
+                </div>
+                <h1 class="letra">O</h1>
+                <button class="cargar__imagen" id="cargar">
+                    <p class="texto_archivo">Seleccione archivo</p>
+                    <input type="file" accept="image/*" name="cargar" id="cargarImagen" multiple data-imagen>
+                    </input>
+                </button>
+                <div id="preview"></div>
+            </div>
+            <span class="span__input" id="spanFour"></span>
+            <div class="caja-ordenar">
+                <label class="titulo__campo__producto">Nombre del producto: </label>
+                <input type="text" placeholder="escribe el nombre del producto" class="input__formulario__producto" max-lenght="20" required data-nombre>
+                <span class="span__input" id="span_One_ag"></span>
+            </div>
+            <div class="caja-ordenar">
+                <label class="titulo__campo__producto">Precio del producto: </label>
+                <input type="number" placeholder="$" class="input__formulario__producto" required data-precio>
+                <span class="span__input" id="span_Two_ag"></span>
+            </div>
+            <div class="caja-ordenar">
+                <label class="titulo__campo__producto">Categoria: </label>
+                <input type="input" placeholder="ingrese cateogoria" class="input__formulario__producto" maxlength="10" required data-cate>
+                <span class="span__input" id="span_Two_ag"></span>
+            </div>
+            <div class="caja-ordenar">
+                <label class="titulo__campo__producto">Descripcion del producto: </label>
+                <textarea placeholder="escribe descripcion del producto" class="input__formulario__descripcion" maxlength="150" data-desc></textarea>
+                <span class="span__input" id="span_Tree_ag"></span>
+            </div>
+            <input type="submit" value="Agregar Producto" class="boton__formulario__producto" data-producto>
+
+        </form>
+
+    </section>
+
+
+
+    <section class="formulario" i>
+        <div class="formulario__politicas">
+            <div class="caja__icono__formulario">
+                <i class="fa-solid fa-gamepad"></i>
+                <h3 class="menu__cabeza__titulo__formulario"><span class="icono__color__formulario">Alura</span>Geek</h3>
+            </div>
+            <div class="contenido__politica">
+                <h2 class="formulario__politicas_titulo">Quienes somos</h2>
+                <h2 class="formulario__politicas_titulo">Política de privacidad</h2>
+                <h2 class="formulario__politicas_titulo">Programa de fidelidad</h2>
+                <h2 class="formulario__politicas_titulo">Nuestras tiendas</h2>
+                <h2 class="formulario__politicas_titulo">Quiero ser franquiciado</h2>
+                <h2 class="formulario__politicas_titulo">Anúncie aquí</h2>
+            </div>
+        </div>
+        <form class="formulario__rellenar" id="form">
+            <div class="texto">
+                <h2 class="titulo__formulario__contacto">Contacta con nosotros</h2>
+            </div>
+            <div class="campo_error">
+                <label class="titulo__campo">Nombre: </label>
+                <input type="text" id="nombre" placeholder="escribe tu nombre" class="input__formulario" autocomplete="off" required></input>
+                <span class="span__input" data-span id="span1"></span>
+            </div>
+            <div class="campo_error" id="caja">
+                <textarea placeholder="escribe tu mensaje" id="textarea" class="input__formulario__mensaje" max-lenght="160" required></textarea>
+                <span class="span__input" data-span id="span2"></span>
+            </div>
+            <button type="submit" class="boton__formulario" id="boton" data-login>enviar</button>
+
+        </form>
+
+    </section>
+    <footer class="rodapie">
+        <h2 class="titulo_pie">Desarrollado por Angel Snatibañez</h2>
+        <p class="anio">2022</p>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="./controllers/crearProducto.js"></script>
+    <script src="./validaciones/validar.producto.js"></script>
+</body>
+
+</html>

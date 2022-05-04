@@ -1,0 +1,39 @@
+.caja__icono {
+    width: 157px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono__color {
+    color: #457de6;
+    font-weight: bold;
+}
+
+.menu__cabeza__opciones {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu__cabeza__titulo {
+    font-weight: bold;
+}
+
+.fa-gamepad {
+    font-size: 21px;
+    color: #457de6;
+}
+
+.fa-magnifying-glass {
+    font-size: 18px;
+    color: #464646;
+}
+
+.button__login {
+    width: 133px;
+    height: 40px;
+    border: 1px solid #2A7AE4;
+    background: none;
+    color: #519eec;
+    cursor: pointer;
+}

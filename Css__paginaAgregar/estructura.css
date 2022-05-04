@@ -1,0 +1,25 @@
+.estructura {
+    background: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas: "menu__cabeza" "contenido" "formulario" "formulario__rellenar__cuerpo" "rodapie";
+    grid-template-columns: auto;
+    grid-template-rows: 72px 100vh 545px;
+}
+
+.menu__cabeza {
+    grid-area: menu__cabeza;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rodapie {
+    grid-area: rodapie;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

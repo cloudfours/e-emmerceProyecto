@@ -1,0 +1,211 @@
+@media screen and (min-width: 768px) {
+    .button__login {
+        order: 2;
+    }
+    .busqueda__button {
+        width: 272px;
+        height: 42px;
+        display: flex;
+        margin-right: 50px;
+        border: 1px solid rgb(113, 109, 109);
+        border-radius: 20px;
+        justify-content: space-between;
+        align-items: center;
+        background: #F5F5F5;
+    }
+    .buscar__campo {
+        display: flex;
+        width: 271px;
+        height: 13px;
+        border: none;
+        background: #F5F5F5;
+        outline-style: none;
+    }
+    .fa-magnifying-glass {
+        margin-right: 12px;
+    }
+    .estructura {
+        background: #f1f1f1;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-areas: "menu__cabeza" "contenido" "formulario" "formulario__rellenar__cuerpo" "rodapie";
+        grid-template-columns: auto;
+        grid-template-rows: 72px 25vh 184vh 555px;
+    }
+    .caja__icono {
+        width: 157px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    .caja__producto__contenido {
+        width: 164px;
+        height: 230px;
+    }
+    #cabeza,
+    #cabeza2,
+    #cabeza3,
+    #cabeza4,
+    #cabeza5,
+    #cabeza6,
+    #cabeza7,
+    #cabeza8,
+    #cabeza9,
+    #cabeza10,
+    #cabeza11,
+    #cabeza12,
+    #cabeza13,
+    #cabeza13,
+    #cabeza14,
+    #cabeza15,
+    #cabeza16,
+    #cabeza17,
+    #cabeza18 {
+        width: 164px;
+        height: 174px;
+    }
+    .button__login {
+        width: 166px;
+        height: 40px;
+    }
+    .caja__agregarButton {
+        margin-right: 34px;
+    }
+    .caja__button__texto {
+        display: flex;
+        flex-direction: row;
+        height: 96px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .formulario {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .menu__cabeza {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 62px;
+    }
+    .button__login {
+        order: 2;
+        margin: 60px;
+    }
+    .busqueda__button {
+        width: 383px;
+        height: 42px;
+        display: flex;
+        margin-right: 50px;
+        border: 1px solid rgb(113, 109, 109);
+        border-radius: 20px;
+        justify-content: space-between;
+        align-items: center;
+        background: #F5F5F5;
+    }
+    .buscar__campo {
+        display: flex;
+        width: 271px;
+        height: 13px;
+        border: none;
+        background: #F5F5F5;
+        outline: none;
+    }
+    .fa-magnifying-glass {
+        margin-right: 12px;
+    }
+    .estructura {
+        background: #f1f1f1;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-areas: "menu__cabeza" "contenido" "formulario" "formulario__rellenar__cuerpo" "rodapie";
+        grid-template-columns: auto;
+        grid-template-rows: 72px 25vh 128vh 545px;
+    }
+    .caja__icono {
+        width: 157px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    .caja__producto__contenido {
+        width: 176px;
+        height: 230px;
+    }
+    #cabeza,
+    #cabeza2,
+    #cabeza3,
+    #cabeza4,
+    #cabeza5,
+    #cabeza6,
+    #cabeza7,
+    #cabeza8,
+    #cabeza9,
+    #cabeza10,
+    #cabeza11,
+    #cabeza12,
+    #cabeza13,
+    #cabeza13,
+    #cabeza14,
+    #cabeza15,
+    #cabeza16,
+    #cabeza17,
+    #cabeza18 {
+        width: 176px;
+        height: 174px;
+    }
+    .button__login {
+        width: 166px;
+        height: 40px;
+    }
+    .caja__agregarButton {
+        margin-right: 60px;
+    }
+    .caja__button__texto {
+        display: flex;
+        flex-direction: row;
+        height: 96px;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-left: 30px;
+    }
+    .formulario {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 5px;
+    }
+    .caja__producto__contenido {
+        margin: 0 13px;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .formulario__politicas {
+        width: 600px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .formulario__rellenar {
+        width: 600px;
+    }
+    .input__formulario {
+        height: 56px;
+        width: 560px;
+    }
+    .input__formulario__mensaje {
+        height: 82px;
+        width: 560px;
+    }
+    .caja__productos {
+        justify-content: center;
+    }
+}

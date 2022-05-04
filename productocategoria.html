@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css__paginaPrincipal/estructura.css">
+    <link rel="stylesheet" href="./Css__paginaPrincipal/reset.css">
+    <link rel="stylesheet" href="./Css__paginaPrincipal/cabeza.css">
+    <link rel="stylesheet" href="./Css__paginaPrincipal/cuerpo.css">
+    <link rel="stylesheet" href="./Css__paginaPrincipal/formulario.css">
+    <link rel="stylesheet" href="./Css__paginaPrincipal/pie.css">
+    <link rel="stylesheet" href="./Css__paginaPrincipal/responsive.css">
+    <script src="https://kit.fontawesome.com/af82257cc6.js" crossorigin="anonymous"></script>
+    <title>PRODUCTOS</title>
+</head>
+
+<body class="estructura">
+    <header class="menu__cabeza">
+        <nav class="menu__cabeza__opciones">
+            <div class="caja__icono">
+                <i class="fa-solid fa-gamepad"></i>
+                <h3 class="menu__cabeza__titulo"><span class="icono__color">Alura</span>Geek</h3>
+            </div>
+            <div class="busqueda__button">
+                <input class="buscar__campo" type="text" placeholder="¿Que deseas Buscar?">
+                <i class="fa-solid fa-magnifying-glass" data-modificar></i>
+            </div>
+
+        </nav>
+        <button class="button__login"><a href="./Sesion.html">Login</a></button>
+
+    </header>
+    <section class="caja__button__texto">
+        <h2 class="titulo__producto__texto">Todos los productos</h2>
+        <button class="caja__agregarButton"><a href="./agregar-producto.html">Agregar producto</a></button>
+    </section>
+    <section class="caja__productos" data-conten-pro>
+        <div class="caja__producto__contenido">
+            <div class="caja__producto__contenido__imagen" id="cabeza">
+                <i class="fa-solid fa-trash"></i>
+                <i class="fa-solid fa-pen"></i>
+            </div>
+            <h3 class="nombre__producto">Maestro</h3>
+            <span class="caja__nombre__producto__precio">$ 60.00</span>
+            <p class="referencia__producto">#4562123</p>
+        </div>
+
+    </section>
+    <!-- <button data-login width="50" height="50"> enviar</button> -->
+    <section class="formulario" i>
+        <div class="formulario__politicas">
+            <div class="caja__icono__formulario">
+                <i class="fa-solid fa-gamepad"></i>
+                <h3 class="menu__cabeza__titulo__formulario"><span class="icono__color__formulario">Alura</span>Geek</h3>
+            </div>
+            <div class="contenido__politica">
+                <h2 class="formulario__politicas_titulo">Quienes somos</h2>
+                <h2 class="formulario__politicas_titulo">Política de privacidad</h2>
+                <h2 class="formulario__politicas_titulo">Programa de fidelidad</h2>
+                <h2 class="formulario__politicas_titulo">Nuestras tiendas</h2>
+                <h2 class="formulario__politicas_titulo">Quiero ser franquiciado</h2>
+                <h2 class="formulario__politicas_titulo">Anúncie aquí</h2>
+            </div>
+        </div>
+        <form class="formulario__rellenar" id="form">
+            <div class="texto">
+                <h2 class="titulo__formulario__contacto">Contacta con nosotros</h2>
+            </div>
+            <div class="campo_error">
+                <label class="titulo__campo">Nombre: </label>
+                <input type="text" id="nombre" placeholder="escribe tu nombre" class="input__formulario" autocomplete="off" required></input>
+                <span class="span__input" data-span id="span1"></span>
+            </div>
+            <div class="campo_error" id="caja">
+                <textarea placeholder="escribe tu mensaje" id="textarea" class="input__formulario__mensaje" max-lenght="160" required></textarea>
+                <span class="span__input" data-span id="span2"></span>
+            </div>
+            <button type="submit" class="boton__formulario" id="boton" disabled data-login>enviar</button>
+
+        </form>
+
+    </section>
+    <footer class="rodapie">
+        <h2 class="titulo_pie">Desarrollado por Angel Snatibañez</h2>
+        <p class="anio">2022</p>
+
+    </footer>
+    <script src="./controllers/funcion.js"></script>
+    <script type="module" src="./controllers/mostrar.productos.js"></script>
+    <script src='./db.json'></script>
+
+</html>

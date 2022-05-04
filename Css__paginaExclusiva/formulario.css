@@ -1,0 +1,128 @@
+.formulario__politicas_titulo {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    background: #EAF2FD;
+}
+
+.caja__icono__formulario {
+    width: 157px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.menu__cabeza__titulo__formulario {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.icono__color__formulario {
+    color: #457de6;
+    font-weight: bold;
+}
+
+.formulario__rellenar {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background: #EAF2FD;
+}
+
+.texto {
+    margin: 5px 16px;
+}
+
+.titulo__campo {
+    margin: 5px 16px;
+}
+
+.titulo__formulario__contacto {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.input__formulario {
+    height: 56px;
+    width: 328px;
+    left: 0px;
+    top: 0px;
+    border-radius: 4px;
+    margin: 5px 16px;
+    border: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input__formulario__mensaje {
+    height: 82px;
+    width: 328px;
+    left: 0px;
+    top: 0px;
+    border-radius: 4px;
+    margin: 5px 16px;
+    border: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.boton__formulario {
+    height: 43px;
+    width: 144px;
+    left: 0px;
+    top: 189px;
+    border-radius: 0px;
+    padding: 12px, 16px, 12px, 16px;
+    margin: 5px 16px;
+    border: none;
+    background: #457de6;
+    color: #fff;
+    cursor: pointer;
+}
+
+.boton__formulario:hover {
+    background: #e29829;
+    transition: all 2s;
+}
+
+.boton__formulario:disabled {
+    background: #424241;
+    transition: all 2s;
+}
+
+.titulo__campo {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.campo_error {
+    display: flex;
+    flex-direction: column;
+}
+
+.span__input {
+    color: #e29829;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0 20px;
+}
