@@ -34,7 +34,7 @@ const actualizarProducto = async(url, nombre, precio, categoria, descripcion, id
     }
 }
 
-const detalleProducto = (id) => fetch(`${url}/${id}`).then((respuesta) => respuesta.json()).catch((error) => error);
+const detalleProducto = (id) => fetch(`${url}?id=${id}`).then((respuesta) => respuesta.json()).catch((error) => error);
 console.log(fetch);
 const catLista = async(categoria) => {
     try {
