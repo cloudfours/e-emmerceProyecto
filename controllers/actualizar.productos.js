@@ -1,26 +1,9 @@
 import { functPro } from '../services/cliente.servidor.js';
 const formulario = document.querySelector('[ data-form]');
 let retorno = '';
-const verDetalleproducto = () => {
+export const verDetalleproducto = () => {
     const urls = new URL(window.location);
     const id = urls.searchParams.get("id");
-    urlact.addEventListener('change', (e) => {
-        e.preventDefault();
-
-        var reader = new FileReader();
-        reader.readAsDataURL(urlact.files[0]);
-        reader.onload = function() {
-            console.log(reader.result);
-
-            retorno = reader.result
-            console.log('mi retorno', retorno);
-
-            return retorno;
-
-
-        }
-
-    })
     if (id === null) {
         console.log('no hay nada');
     }
@@ -47,7 +30,7 @@ formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
     console.log(modificarProducto());
     try {
-        functPro.actualizarProducto(retorno, nombre.value, precio.value, categoria.value, desc.value, id)
+        functPro.actualizarProducto(urlact.value, nombre.value, precio.value, categoria.value, desc.value, id)
         window.location.href = ("producto.html");
     } catch (error) {
         console.log(error)

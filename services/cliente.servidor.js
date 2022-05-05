@@ -14,14 +14,15 @@ const crearProducto = (url, nombre, precio, categoria, descripcion) => {
         body: JSON.stringify({ url, nombre, precio, descripcion, categoria, id: uuid.v4() }),
     });
 }
-const eliminarProducto = (id) => {
-    return fetch(`${link}/${id}`, {
-        method: "DELETE",
-    });
-}
+const eliminarProducto = (id) =>
+    fetch(`${link}?${id}`, {
+        method: "DELETE"
+    })
+    .then((respuesta) => respuesta)
+    .catch((error) => error);
 const actualizarProducto = async(url, nombre, precio, categoria, descripcion, id) => {
     try {
-        const respuesta = await fetch(`${link}/${id}`, {
+        const respuesta = await fetch(`${link}${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
