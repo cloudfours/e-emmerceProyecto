@@ -24,10 +24,10 @@
                 <i class="fa-solid fa-gamepad"></i>
                 <h3 class="menu__cabeza__titulo"><span class="icono__color">Alura</span>Geek</h3>
             </div>
-            <div class="busqueda__button">
+            <form class="busqueda__button">
                 <input class="buscar__campo" type="text" placeholder="¿Que deseas Buscar?">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+                <button class="fa-solid fa-magnifying-glass  border" data-buscar></button>
+            </form>
 
         </nav>
         <button class="button__login"><a href="./Sesion.html">Login</a></button>
@@ -99,6 +99,7 @@
 
     <script src="./funciones/iniciar.sesion.js"></script>
     <script src="./funciones/sesion.login.js"></script>
+    <script type="module" src="./controllers/buscar.js"></script>
 </body>
 
 </html>

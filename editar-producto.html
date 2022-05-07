@@ -19,10 +19,10 @@
 <body class="estructura">
     <header class="menu__cabeza">
         <nav class="menu__cabeza__opciones">
-            <div class="caja__icono">
-                <i class="fa-solid fa-gamepad"></i>
-                <h3 class="menu__cabeza__titulo"><span class="icono__color">Alura</span>Geek</h3>
-            </div>
+            <form class="busqueda__button">
+                <input class="buscar__campo" type="text" placeholder="¿Que deseas Buscar?">
+                <button class="fa-solid fa-magnifying-glass  border" data-buscar></button>
+            </form>
             <div class="busqueda__button">
                 <input class="buscar__campo" type="text" placeholder="¿Que deseas Buscar?">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -133,6 +133,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="./controllers/actualizar.productos.js"></script>
     <script src="./validaciones/validar.producto.js"></script>
+    <script type="module" src="./controllers/buscar.js"></script>
 </body>
 
 </html>

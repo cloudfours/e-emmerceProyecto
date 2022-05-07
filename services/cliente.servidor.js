@@ -20,14 +20,14 @@ const eliminarProducto = (id) =>
     })
     .then((respuesta) => respuesta)
     .catch((error) => error);
-const actualizarProducto = async(url, nombre, precio, categoria, descripcion, id) => {
+const actualizarProducto = (url, nombre, precio, categoria, descripcion, id) => {
     try {
-        const respuesta = await fetch(`${link}/${id}`, {
+        const respuesta = fetch(`${link}/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ url, nombre, precio, categoria, descripcion, id }),
+            body: JSON.stringify({ url, nombre, precio, categoria, descripcion }),
         });
         return respuesta;
     } catch (err) {
@@ -35,8 +35,8 @@ const actualizarProducto = async(url, nombre, precio, categoria, descripcion, id
     }
 }
 
-const detalleProducto = (id) => fetch(`${link}/${id}`).then((respuesta) => respuesta.json()).catch((error) => error);
-console.log(fetch);
+const detalleProducto = (id) => fetch(`${link}?id=${id}`).then((respuesta) => respuesta.json()).catch((error) => error);
+console.log(detalleProducto);
 const catLista = async(categoria) => {
     try {
         const respuesta = await fetch(`${link}?categoria=${categoria}&_sort=id&_order=desc&_limit=6`);
@@ -46,6 +46,7 @@ const catLista = async(categoria) => {
     }
 
 }
+const buscarPro = (buscar) => fetch(`${link}?nombre_like=${buscar}`).then((respuesta) => respuesta.json()).catch((error) => error);
 const productosPorcate = (categoria) => fetch(`${link}?categoria=${categoria}`).then((respuesta) => respuesta.json()).catch((error) => error);
 export const functPro = {
     crearProducto,
@@ -54,5 +55,6 @@ export const functPro = {
     eliminarProducto,
     detalleProducto,
     catLista,
-    productosPorcate
+    productosPorcate,
+    buscarPro
 }

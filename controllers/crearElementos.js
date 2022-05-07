@@ -13,7 +13,7 @@ const crearNuevoProducto = (producto) => {
     nombrePro.innerHTML = producto.nombre;
     const precios = document.createElement('span')
     precios.classList.add('caja__nombre__producto__precio')
-    precios.innerHTML = `$${producto.precio}`;
+    precios.innerHTML = `${producto.precio}`;
     const referencesPro = document.createElement('a');
     const iconoBasura = document.createElement('i')
     iconoBasura.setAttribute('id', 'eliminar');
@@ -32,12 +32,8 @@ const crearNuevoProducto = (producto) => {
     crearContPro.appendChild(nombrePro)
     crearContPro.appendChild(precios);
     crearContPro.appendChild(referencesPro)
-    iconoedit.addEventListener('click', (evento) => {
-        evento.preventDefault();
-        window.location.href = 'editar-producto.html'
+    iconoedit.href = `editar-producto.html?id=${producto.id}`
 
-
-    })
     iconoBasura.addEventListener('click', (evento) => {
         evento.preventDefault();
         borrarPro(producto);

@@ -37,3 +37,8 @@
     color: #519eec;
     cursor: pointer;
 }
+
+.border {
+    border: none;
+    background: none;
+}
