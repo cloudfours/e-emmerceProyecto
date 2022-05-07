@@ -1,5 +1,5 @@
-import { functPro } from '../services/cliente.servidor.js';
 import { borrarPro } from './eliminarProducto.js'
+import { verProducto } from './verProductoDet.js'
 const crearNuevoProducto = (producto) => {
     const crearContPro = document.createElement('div')
     crearContPro.classList.add('caja__producto__contenido');
@@ -24,7 +24,7 @@ const crearNuevoProducto = (producto) => {
     iconoedit.classList.add('fa-solid');
     iconoedit.classList.add('fa-pen');
     referencesPro.classList.add('referencia__producto')
-    referencesPro.href = `productocategoria.html?id=${producto.id}`;
+    referencesPro.href = `producto.html?id=${producto.id}`;
     referencesPro.innerHTML = 'ver producto';
     cajaImagen.appendChild(iconoBasura);
     cajaImagen.appendChild(iconoedit);
@@ -38,6 +38,7 @@ const crearNuevoProducto = (producto) => {
         evento.preventDefault();
         borrarPro(producto);
     })
+
 
     return crearContPro;
 
@@ -64,11 +65,13 @@ const mostrarProductoDetalle = (producto) => {
     precios.innerHTML = `$${producto.precio}`;
     const desc = document.createElement('p')
     desc.classList.add('parrafo__producto');
+    desc.innerHTML = `${producto.desc}`;
     crearContPro.appendChild(cajaImagen);
     cajaTextoDet.appendChild(nombrePro);
     cajaTextoDet.appendChild(precios);
     cajaTextoDet.appendChild(desc)
 
+    return crearContPro;
 }
 
 export const enviarElemento = {

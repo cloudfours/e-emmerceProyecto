@@ -35,11 +35,20 @@ const actualizarProducto = (url, nombre, precio, categoria, descripcion, id) => 
     }
 }
 
-const detalleProducto = (id) => fetch(`${link}?id=${id}`).then((respuesta) => respuesta.json()).catch((error) => error);
+const detalleProducto = (id) => fetch(`${link}/${id}`).then((respuesta) => respuesta.json()).catch((error) => error);
 console.log(detalleProducto);
 const catLista = async(categoria) => {
     try {
         const respuesta = await fetch(`${link}?categoria=${categoria}&_sort=id&_order=desc&_limit=6`);
+        return respuesta.json();
+    } catch (err) {
+        return err;
+    }
+
+}
+const proSimiliares = async(categoria) => {
+    try {
+        const respuesta = await fetch(`${link}?categoria=${categoria}`);
         return respuesta.json();
     } catch (err) {
         return err;
@@ -56,5 +65,6 @@ export const functPro = {
     detalleProducto,
     catLista,
     productosPorcate,
-    buscarPro
+    buscarPro,
+    proSimiliares
 }
