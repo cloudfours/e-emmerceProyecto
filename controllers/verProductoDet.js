@@ -19,7 +19,8 @@ const verProducto = async() => {
 const productosSimilares = async(producto) => {
     try {
         const misProductos = await functPro.proSimiliares(producto.categoria);
-        const similares = document.querySelector('caja__button__texto');
+        console.log(misProductos);
+        const similares = document.querySelector('.caja__productos')
         misProductos.forEach((producto => {
             if (similares.childElementCount < 6) {
                 const produc = enviarElemento.crearNuevoProducto(producto);
@@ -33,7 +34,9 @@ const productosSimilares = async(producto) => {
 }
 
 const mostrarProducto = (producto) => {
-    enviarElemento.mostrarProductoDetalle(producto);
+
+    const pro = enviarElemento.mostrarProductoDetalle(producto);
+    crearProducto.appendChild(pro);
 
 }
 verProducto();

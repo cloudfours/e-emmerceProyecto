@@ -35,8 +35,8 @@ const actualizarProducto = (url, nombre, precio, categoria, descripcion, id) => 
     }
 }
 
-const detalleProducto = (id) => fetch(`${link}/${id}`).then((respuesta) => respuesta.json()).catch((error) => error);
-console.log(detalleProducto);
+const detalleProducto = (id) => fetch(`${link}${id}`).then((respuesta) => respuesta.json()).catch((error) => error);
+
 const catLista = async(categoria) => {
     try {
         const respuesta = await fetch(`${link}?categoria=${categoria}&_sort=id&_order=desc&_limit=6`);
@@ -48,7 +48,7 @@ const catLista = async(categoria) => {
 }
 const proSimiliares = async(categoria) => {
     try {
-        const respuesta = await fetch(`${link}?categoria=${categoria}`);
+        const respuesta = await fetch(`${link}?${categoria}`);
         return respuesta.json();
     } catch (err) {
         return err;

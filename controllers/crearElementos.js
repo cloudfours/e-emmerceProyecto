@@ -1,5 +1,4 @@
 import { borrarPro } from './eliminarProducto.js'
-import { verProducto } from './verProductoDet.js'
 const crearNuevoProducto = (producto) => {
     const crearContPro = document.createElement('div')
     crearContPro.classList.add('caja__producto__contenido');
@@ -48,6 +47,7 @@ const crearNuevoProducto = (producto) => {
 
 
 const mostrarProductoDetalle = (producto) => {
+    const crearProducto = document.querySelector('.caja__button__texto')
     const crearContPro = document.createElement('div')
     crearContPro.classList.add('imagen__producto__contenido');
     const cajaImagen = document.createElement('div');
@@ -70,8 +70,11 @@ const mostrarProductoDetalle = (producto) => {
     cajaTextoDet.appendChild(nombrePro);
     cajaTextoDet.appendChild(precios);
     cajaTextoDet.appendChild(desc)
+    console.log(crearContPro);
+    crearProducto.appendChild(crearContPro)
+    crearProducto.appendChild(cajaTextoDet)
+    return crearProducto;
 
-    return crearContPro;
 }
 
 export const enviarElemento = {
